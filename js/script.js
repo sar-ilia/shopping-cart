@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
     let products = document.querySelectorAll('.product'),
-        buttons = document.querySelectorAll('button'),
         openBtn = document.querySelector('.open'),
         shop = document.querySelector('.shop');
 
@@ -54,24 +53,21 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    buttons.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            let item = products[i].cloneNode(true),
-                btn = item.querySelector('button');
-            
-            btn.remove();
+    shop.addEventListener('click', (e) => {
+        if (e.target.classList.contains('buy')) {
+            let product = e.target.parentElement;
+            e.target.remove();
 
             let removeBtn = document.createElement('button');
             removeBtn.textContent = "Remove from cart";
             removeBtn.className = "remove";
 
-            item.appendChild(removeBtn);
+            product.appendChild(removeBtn);
 
-            field.appendChild(item);
-            products[i].remove();
+            field.appendChild(product);
 
             checkCartEmpty();
-        });
+        }
     })
 
     field.addEventListener('click', (e) => {
@@ -81,12 +77,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
             let addBtn = document.createElement('button');
             addBtn.textContent = "Buy now!";
+            addBtn.className = "buy";
             product.appendChild(addBtn);
 
             shop.appendChild(product);
 
-            
+            checkCartEmpty();
         }
     })
-    
+
 });
