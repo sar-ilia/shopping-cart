@@ -5,7 +5,7 @@ Users can move items between the shop and cart, open/close the cart window, and 
 
 ---
 
-## 🔧 Technologies Used
+## Technologies Used
 
 - **HTML5** – structure of the application  
 - **CSS3** – basic styling for layout and elements  
@@ -14,7 +14,7 @@ Users can move items between the shop and cart, open/close the cart window, and 
 
 ---
 
-## ✨ Features
+## Features
 
 - Product cards with "Buy now!" buttons  
 - Move items to the cart on click  
@@ -25,13 +25,13 @@ Users can move items between the shop and cart, open/close the cart window, and 
 
 ---
 
-## 🖥️ Live Preview
+## Live Preview
 
 [https://sar-ilia.github.io/shopping-cart/](https://sar-ilia.github.io/shopping-cart/)
 
 ---
 
-## 📦 Local Setup
+## Local Setup
 
 ```bash
 git clone https://github.com/sar-ilia/shopping-cart.git
